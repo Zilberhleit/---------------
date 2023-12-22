@@ -1,0 +1,23 @@
+body{
+    background-color: aquamarine;
+}
+
+.notes{
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+.note-item{
+    background-color: azure;
+    width: 80px;
+    margin: 10px;
+}
+
+ul{
+   list-style-type: none;
+   visibility: visible; 
+}

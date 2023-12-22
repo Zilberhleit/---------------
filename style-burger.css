@@ -1,0 +1,172 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #074d39;
+    /*height: 70px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: white;
+    font-family: monospace;
+}
+
+.menu{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    height: 0;
+    bottom: 0;
+    transform: translateY(40px);
+    visibility: hidden;    
+    transition: .5s all;
+}
+
+#check-menu:checked ~.menu{
+    max-height: 500px;
+    font-size: 16px;
+    visibility: visible;
+}
+
+#check-menu:checked ~.second{
+    animation-name: X;
+    animation-duration: 0.15s;
+    animation-delay: 0.3s;
+    animation-fill-mode:forwards;
+}
+
+#check-menu:checked ~.third{
+    animation-name: -X;
+    animation-duration: 0.15s;
+    animation-delay: 0.3s;
+    animation-fill-mode:forwards;
+}
+
+#check-menu:checked ~.first{
+    animation-name: down;
+    animation-duration: 0.3s;
+    animation-fill-mode:forwards
+}
+
+#check-menu:checked ~.fourth{
+    animation-name: up;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.menu a{
+    background-color: #074d39;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    border-top: 3px solid;
+    border-bottom: 7px solid green;
+    text-align: center;
+}
+
+.menu a:hover{
+    animation-name: button;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button{
+    to{
+        background-color: green;
+    }
+}
+
+.menu li{width: 200px;}
+
+.wrapper{
+    display: flex;
+    margin-left: auto;
+    width: 90px;
+    justify-content: end;
+    background-color: #074d39;
+    position:relative;
+    color: white;
+    text-align: center;
+    height: 40px;
+    left: -20px;
+}
+
+#check-menu{display: none;}
+
+label{
+    display: flex;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.burger-line{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+}
+
+.second, .third{
+    margin: 10px auto;
+    animation-fill-mode: backwards;
+    animation-duration: 0.3s;
+}
+
+.fourth{
+    margin: 20px auto;
+}
+
+@keyframes X{
+    50%{
+        transform: rotate(22.5deg);
+    }
+    to{
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes -X{
+    50%{
+        transform: rotate(-22.5deg);
+    }
+    to{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes down{
+    to{
+        transform: translateY(10px);
+        visibility: hidden;
+    }
+}
+
+@keyframes up{
+    to{
+        transform: translateY(-10px);
+        visibility: hidden;
+    }
+}
+
+@media all and (max-width: 768px){
+    .wrapper{
+        width: 50px;
+    }
+
+    header{
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,24 @@
+.foot-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #074d39;
+    color: white;
+    padding: 10px;
+    text-align: justify;
+    gap: 10px;
+}
+
+.sus{
+    text-align: center;
+}
+
+@media all and (max-width: 768px){
+    .foot-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 400px) {
+    .foot-container{
+        grid-template-columns: 1fr;
+    }
+}

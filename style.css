@@ -1,0 +1,41 @@
+#like{
+    position: relative;
+    transform: translate(30px, -10px);
+    background-color: gray;
+    border: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.heart{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%) rotate(45deg);
+    background-color: white;
+}
+
+.heart::after, .heart::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.heart::before{
+    top: -10px;
+    left: 0;
+}
+
+.heart::after{
+    top: 0;
+    left: -10px;
+}
+/*#074d39*/

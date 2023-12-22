@@ -1,0 +1,41 @@
+.social-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #074d39;
+    width: 100%;
+    height: 100px;
+}
+
+.social-site{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(0, 50%);
+    text-align: center;
+    font-size: 40px;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.social-site::after{
+    position: absolute;
+    content: "";
+}
+
+.facebook:hover{
+    background: linear-gradient(45deg, #3b5998, #4d9aff);
+    color: white;
+}
+
+.twitter:hover{
+    background:  linear-gradient(45deg, #00acee, #005fdc);
+    color: white;
+}
+
+.youtube:hover{
+    background:  linear-gradient(45deg, #c4302b, #ff0059);
+    color: white
+}
